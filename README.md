@@ -52,6 +52,7 @@ The `restore-patch.sh` script is used to restore a file to a previous state by a
 **Purpose:**
 The `cp-version.sh` script is used to copy a source file to a target folder. If the target file already exists, the script generates a patch file that captures the differences between the existing target file and the new source file. This patch file is stored in a `.version` subfolder within the target directory.
 
+
 **Usage:**
 ```bash
 ./cp-version.sh <source_file> <target_folder>
