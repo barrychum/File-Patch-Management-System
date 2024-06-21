@@ -27,13 +27,11 @@ target_file=$(basename "$source_file")
 if [ -f "$target_folder/$target_file" ]; then
     # Get current timestamp in desired format
     timestamp=$(date +%Y%m%d-%H%M%S)
+    cp -a "$target_folder/$target_file" "$target_version_folder/$version_file_name/$source_file.$timestamp.version"
+fi
 
-    # Create version file name with format
-    version_file_name="$target_file.$timestamp.version"
-    
-    if ! cp -a "$source_file" "$target_version_folder/$version_file_name"; then
-        exit 1
-    fi
+if ! cp -a "$source_file" "$target_folder/$target_file"; then
+    exit 1
 fi
 
 # Script successful execution (no echo)
