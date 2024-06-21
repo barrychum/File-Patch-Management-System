@@ -67,7 +67,6 @@ The `cp-version.sh` script is used to copy a source file to a target folder. If 
 - Copies the source file to the target folder.
 
 
-
 ## Folder Structure
 
 ```
